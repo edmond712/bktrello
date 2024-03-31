@@ -56,7 +56,7 @@ class MyUser(AbstractBaseUser):
     REQUIRED_FIELDS = ('username', )
 
     def __str__(self):
-        return self.username
+        return f'{self.pk}) {self.username}'
 
     def has_perm(self, perm, obj=None):
         return True
@@ -73,21 +73,5 @@ class MyUser(AbstractBaseUser):
         verbose_name_plural = 'Пользователи'
 
 
-class Task(models.Model):
-    title = models.CharField(
-        max_length=200
-    )
-    description = models.TextField(
-        blank=True
-    )
-    created_at = models.DateTimeField(
-        auto_now_add=True
-    )
-    due_date = models.DateField()
-    completed = models.BooleanField(
-        default=False
-    )
 
-    def __str__(self):
-        return self.title
 

@@ -40,8 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'user',
+    'task',
     'rest_framework',
-    'jwt'
+    'jwt',
 ]
 
 REST_FRAMEWORK = {
