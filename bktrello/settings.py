@@ -41,8 +41,7 @@ INSTALLED_APPS = [
 
     'user',
     'task',
-    'rest_framework',
-    'jwt',
+    'rest_framework_simplejwt',
 ]
 
 REST_FRAMEWORK = {

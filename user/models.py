@@ -43,11 +43,14 @@ class MyUser(AbstractBaseUser):
         blank=True,
         null=True
     )
-    created_date = models.DateTimeField(
+    date_joined = models.DateTimeField(
         auto_now_add=True
     )
     is_admin = models.BooleanField(
         default=False
+    )
+    is_active = models.BooleanField(
+        default=True
     )
 
     objects = MyUserManager()
