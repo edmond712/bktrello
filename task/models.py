@@ -14,6 +14,7 @@ class Task(models.Model):
     completed = models.BooleanField(
         default=False
     )
+    paginate_by = 2
 
     def __str__(self):
         return self.title
